@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="821.0" style="-fx-background-color: #2196f3#2196f3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teoria.productosfeo.controller.ProductosController">
+   <VBox prefHeight="400.0" prefWidth="261.0" style="-fx-background-color: #1769aa#1769aa;">
+      <Label text="Nombre del producto" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Fira Mono" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNombre" maxWidth="-Infinity" prefHeight="26.0" prefWidth="172.0" promptText="Manzanas">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </TextField>
+      <Label layoutX="10.0" layoutY="10.0" text="Precio del producto" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Fira Mono" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfPrecio" layoutX="20.0" layoutY="50.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="172.0" promptText="19.99">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </TextField>
+      <Label layoutX="10.0" layoutY="76.0" text="Unidades del producto" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Fira Mono" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfUnidades" layoutX="20.0" layoutY="116.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="172.0" promptText="2">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </TextField>
+      <CheckBox fx:id="cbDisponible" mnemonicParsing="false" text="Disponible">
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </CheckBox>
+      <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#Guardar" text="Guardar">
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="20.0" layoutY="218.0" onAction="#eliminar" mnemonicParsing="false" text="Eliminar">
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="btnActualizar" layoutX="20.0" layoutY="254.0" onAction="#actualizar" mnemonicParsing="false" text="Actualizar">
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+   </VBox>
+   <ComboBox fx:id="cbID" layoutX="273.0" layoutY="14.0" prefHeight="26.0" prefWidth="72.0" style="-fx-border-color: #2a3eb1#2a3eb1 #2a3eb1#2a3eb1; -fx-border-radius: 5px;" />
+   <TableView fx:id="tvTabla" layoutX="273.0" layoutY="62.0" prefHeight="200.0" prefWidth="538.0" style="-fx-border-color: #2a3eb1#2a3eb1; -fx-border-radius: 5px;">
+      <columns>
+         <TableColumn fx:id="ColID" prefWidth="38.0" text="ID" />
+         <TableColumn fx:id="colNombre" prefWidth="92.0" text="NOMBRE" />
+         <TableColumn fx:id="colUnidades" prefWidth="72.0" text="UNIDADES" />
+         <TableColumn fx:id="colPrecio" prefWidth="61.0" text="PRECIO" />
+         <TableColumn fx:id="colFecha" minWidth="0.0" prefWidth="175.0" text="FECHA_ENVASADO" />
+         <TableColumn fx:id="colDisponible" prefWidth="98.0" text="DISPONIBLE" />
+      </columns>
+   </TableView>
+</AnchorPane>
