@@ -1,7 +1,5 @@
 package com.teoria.productosfeo.model;
 
-import java.util.Date;
-
 public class Producto {
 
     private int id;
